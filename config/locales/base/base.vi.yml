@@ -1,0 +1,10 @@
+vi:
+  hello: "Xin chào"
+  base_title: "Ứng dụng học Ruby on Rails"
+  locales:
+    english: "Tiếng Anh"
+    vietnamese: "Tiếng Việt"
+  helpers:
+    submit:
+      create: "Thêm %{model}"
+      update: "Cập nhật %{model}"

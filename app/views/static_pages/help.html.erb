@@ -1,0 +1,12 @@
+<% provide :title, t(".title") %>
+
+<h1><%= t(".heading") %></h1>
+
+<p>
+  <%= t(".content_1") %>
+  <%= link_to Settings.help_page_text, Settings.help_page_url %>.
+  <%= t(".content_2") %>
+  <%= link_to Settings.book_url do %>
+    <em><%= Settings.book_link_text %></em>
+  <% end %>.
+</p>

@@ -1,0 +1,7 @@
+vi:
+  layouts:
+    header:
+      logo: "Ứng dụng mẫu"
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      login: "Đăng nhập"

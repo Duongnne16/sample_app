@@ -1,0 +1,32 @@
+vi:
+  products:
+    form:
+      error_title:
+        one: "%{count} lỗi khiến sản phẩm không được lưu:"
+        other: "%{count} lỗi khiến sản phẩm không được lưu:"
+    notice:
+      create: "Tạo sản phẩm thành công."
+      update: "Cập nhật sản phẩm thành công."
+      not_found: "Không tìm thấy sản phẩm."
+      destroy: 
+        success: "Xóa sản phẩm thành công."
+        failure: "Xóa sản phẩm thất bại."
+    actions:
+      show: "Xem"
+      edit: "Chỉnh sửa"
+      destroy: "Xoá"
+      confirm: "Bạn có chắc chắn không?"
+    titles:
+      editing: "Chỉnh sửa sản phẩm"
+      index: "Danh sách sản phẩm"
+    links:
+      edit: "Chỉnh sửa sản phẩm này"
+      show: "Xem sản phẩm này"
+      back: "Quay lại danh sách sản phẩm"
+      new: "Thêm sản phẩm mới"
+    headers:
+      name: "Tên"
+    messages:
+      no_products: "Không có sản phẩm nào"
+    buttons:
+      destroy: "Xóa sản phẩm này"

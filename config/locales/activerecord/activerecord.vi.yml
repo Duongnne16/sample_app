@@ -1,0 +1,32 @@
+vi:
+  activerecord:
+    models:
+      user: "Người dùng"
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+        birthday: "Ngày sinh"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+              too_long: "quá dài (tối đa %{count} ký tự)"
+            email:
+              blank: "không được để trống"
+              too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+              too_long: "quá dài (tối đa %{count} ký tự)"
+              taken: "đã được sử dụng"
+              invalid: "không hợp lệ"
+            password:
+              blank: "không được để trống"
+              too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+            password_confirmation:
+              confirmation: "không khớp với mật khẩu"
+            birthday:
+              blank: "không được để trống"
+              invalid_birthday_range: "phải trong vòng 100 năm trở lại và không ở tương lai"

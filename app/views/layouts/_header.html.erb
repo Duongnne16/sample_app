@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to t(".logo"), "#", id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t(".home"), "#" %></li>
+        <li><%= link_to t(".help"), "#" %></li>
+        <li><%= link_to t(".english"), locale: "en" %></li>
+        <li><%= link_to t(".vietnamese"), locale: "vi" %></li>    
+        <li><%= link_to t(".login"), "#" %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

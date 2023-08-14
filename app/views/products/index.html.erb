@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= t(".index") %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t(".name") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if @products.any? %>
+      <%= render @products %>
+    <% else %>
+      <tr>
+        <td colspan="<%= PRODUCTS_TABLE_COLUMNS %>"><%= t("products.messages.no_products") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t(".new"), new_product_path %>
