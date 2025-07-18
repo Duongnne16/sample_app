@@ -1,0 +1,9 @@
+<% provide :title, t("static_pages.home.title") %>
+
+<h1><%= t("static_pages.home.heading") %></h1>
+
+<p>
+  <%= t("static_pages.home.content") %>
+  <%= link_to t("static_pages.home.book_name"), Settings.book_url %>
+  <%= t("static_pages.home.app_description") %>.
+</p>

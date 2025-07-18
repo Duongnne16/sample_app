@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  scope "(:locale)", locale: /en|vi/ do
+    root "static_pages#home"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+    resources :products
+    resources :microposts, only: [:index]
+
+    get "static_pages/home"
+    get "static_pages/help"
+    get "static_pages/contact"
+  end
 end
