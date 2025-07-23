@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
       if @product.save
         format.html do
           redirect_to product_url(@product),
-                      notice: t("products.notice.create")
+                      notice: t(".create")
         end
         format.json do
           render :show, status: :created, location: @product
@@ -45,7 +45,7 @@ class ProductsController < ApplicationController
       if @product.update(product_params)
         format.html do
           redirect_to product_url(@product),
-                      notice: t("products.notice.update")
+                      notice: t(".update")
         end
         format.json do
           render :show, status: :ok, location: @product
@@ -64,18 +64,17 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1 or /products/1.json
   def destroy
-    @product.destroy
-    respond_to do |format|
-      if @product.destroyed?
+    if @product.destroy
+      respond_to do |format|
         format.html do
-          redirect_to products_url,
-                      notice: t("products.notice.destroy.success")
+          redirect_to products_url, notice: t(".success")
         end
         format.json{head :no_content}
-      else
+      end
+    else
+      respond_to do |format|
         format.html do
-          redirect_to products_url,
-                      alert: t("products.notice.destroy.failure")
+          redirect_to products_url, alert: t(".failure")
         end
         format.json do
           render json: @product.errors, status: :unprocessable_entity
@@ -90,8 +89,16 @@ class ProductsController < ApplicationController
     @product = Product.find_by(id: params[:id])
     return if @product.present?
 
-    flash[:alert] = t("products.notice.not_found")
-    redirect_to products_path
+    respond_to do |format|
+      format.html do
+        flash[:alert] = t("products.not_found")
+        redirect_to products_path
+      end
+      format.json do
+        render json: {error: t("products.not_found")},
+               status: :not_found
+      end
+    end
   end
 
   # Only allow a list of trusted parameters through.

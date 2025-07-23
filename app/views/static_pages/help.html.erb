@@ -1,11 +1,11 @@
-<% provide :title, t("static_pages.help.title") %>
+<% provide :title, t(".title") %>
 
-<h1><%= t("static_pages.help.heading") %></h1>
+<h1><%= t(".heading") %></h1>
 
 <p>
-  <%= t("static_pages.help.content_1") %>
+  <%= t(".content_1") %>
   <%= link_to Settings.help_page_text, Settings.help_page_url %>.
-  <%= t("static_pages.help.content_2") %>
+  <%= t(".content_2") %>
   <%= link_to Settings.book_url do %>
     <em><%= Settings.book_link_text %></em>
   <% end %>.

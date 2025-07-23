@@ -1,0 +1,10 @@
+en:
+  hello: "Hello"
+  base_title: "Ruby on Rails Tutorial Sample App"
+  locales:
+    english: "English"
+    vietnamese: "Vietnamese"
+  helpers:
+    submit:
+      create: "Create %{model}"
+      update: "Update %{model}"

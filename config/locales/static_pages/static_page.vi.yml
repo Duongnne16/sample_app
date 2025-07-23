@@ -1,0 +1,18 @@
+vi:
+  static_pages:
+    contact:
+      title: "Liên hệ"
+      heading: "Liên hệ"
+      greeting: "Xin chào, %{name}!"
+    help:
+      title: "Trợ giúp"
+      heading: "Trợ giúp"
+      content_1: "Nhận trợ giúp về Ruby on Rails Tutorial tại"
+      ruby_help_page: "trang trợ giúp Ruby Tutorial"
+      content_2: "Để nhận trợ giúp về ứng dụng mẫu này, hãy xem"
+    home:
+      title: "Trang chủ"
+      heading: "Trang chủ của StaticPages#home"
+      content: "Đây là trang chủ của"
+      book_name: "Ruby on Rails Tutorial"
+      app_description: "ứng dụng mẫu"

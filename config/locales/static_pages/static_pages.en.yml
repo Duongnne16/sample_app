@@ -1,0 +1,18 @@
+en:
+  static_pages:
+    contact:
+      title: "Contact"
+      heading: "Contact"
+      greeting: "Hello, %{name}!"
+    help:
+      title: "Help"
+      heading: "Help"
+      content_1: "Get help on the Ruby on Rails Tutorial at the"
+      ruby_help_page: "Ruby Tutorial help page"
+      content_2: "To get help on this sample app, see the"
+    home:
+      title: "Home"
+      heading: "StaticPages#home"
+      content: "This is the home page for the"
+      book_name: "Ruby on Rails Tutorial"
+      app_description: "sample application"

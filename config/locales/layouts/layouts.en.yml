@@ -1,0 +1,7 @@
+en:
+  layouts:
+    header:
+      logo: "Sample App"
+      home: "Home"
+      help: "Help"
+      login: "Log in"

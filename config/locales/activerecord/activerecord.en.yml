@@ -1,0 +1,32 @@
+en:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        birthday: "Birthday"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "can't be blank"
+              too_long: "is too long (maximum is %{count} characters)"
+            email:
+              blank: "can't be blank"
+              too_short: "is too short (minimum is %{count} characters)"
+              too_long: "is too long (maximum is %{count} characters)"
+              taken: "has already been taken"
+              invalid: "is invalid"
+            password:
+              blank: "can't be blank"
+              too_short: "is too short (minimum is %{count} characters)"
+            password_confirmation:
+              confirmation: "doesn't match Password"
+            birthday:
+              blank: "can't be blank"
+              invalid_birthday_range: "must be within the last 100 years and not in the future"
