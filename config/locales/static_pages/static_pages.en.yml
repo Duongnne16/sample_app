@@ -12,7 +12,8 @@ en:
       content_2: "To get help on this sample app, see the"
     home:
       title: "Home"
-      heading: "StaticPages#home"
+      heading: "Welcome to the Sample App"
       content: "This is the home page for the"
       book_name: "Ruby on Rails Tutorial"
       app_description: "sample application"
+      signup_now: "Sign up now!"
