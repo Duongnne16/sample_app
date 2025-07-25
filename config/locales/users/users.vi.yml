@@ -1,0 +1,26 @@
+vi:
+  users:
+    not_found: "Không tìm thấy người dùng."
+    new:
+      title: "Đăng ký"
+      heading: "Tạo tài khoản"
+      form:
+        name: "Họ và tên"
+        email: "Email"
+        birthday: "Ngày sinh"
+        password: "Mật khẩu"
+        gender: "Giới tính"
+        password_confirmation: "Xác nhận mật khẩu"
+        submit: "Tạo tài khoản"
+    create:
+      success: "Chào mừng bạn đến với Ứng dụng Mẫu!"
+    show:
+      email: "Email"
+      birthday: "Ngày sinh"
+      gender: "Giới tính"
+      created_at: "Tạo lúc"
+      updated_at: "Cập nhật lúc"
+    genders:
+      male: "Nam"
+      female: "Nữ"
+      other: "Khác"

@@ -1,0 +1,6 @@
+vi:
+  shared:
+    form_errors:
+      header:
+        one: "Biểu mẫu chứa 1 lỗi"
+        other: "Biểu mẫu chứa %{count} lỗi"

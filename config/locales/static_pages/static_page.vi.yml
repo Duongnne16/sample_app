@@ -12,7 +12,8 @@ vi:
       content_2: "Để nhận trợ giúp về ứng dụng mẫu này, hãy xem"
     home:
       title: "Trang chủ"
-      heading: "Trang chủ của StaticPages#home"
+      heading: "Chào mừng đến với Ứng dụng Mẫu"
       content: "Đây là trang chủ của"
       book_name: "Ruby on Rails Tutorial"
       app_description: "ứng dụng mẫu"
+      signup_now: "Đăng ký ngay!"

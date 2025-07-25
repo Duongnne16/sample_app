@@ -1,9 +1,11 @@
 <% provide :title, t(".title") %>
 
-<h1><%= t(".heading") %></h1>
-
-<p>
-  <%= t(".home.content") %>
-  <%= link_to t(".book_name"), Settings.book_url %>
-  <%= t(".app_description") %>.
-</p>
+<div class="center jumbotron">
+  <h1><%= t(".heading") %></h1>
+  <h2>
+    <%= t(".content") %>
+    <%= link_to t(".book_name"), Settings.book_url %>
+    <%= t(".app_description") %>.
+  </h2>
+    <%= link_to t(".signup_now"), "#", class: "btn btn-lg btn-primary" %>
+</div>
