@@ -79,5 +79,6 @@ end
 
 gem "sassc", "~> 2.4"
 
+gem "bcrypt", "~> 3.1.7"
 gem "config"
 gem "i18n", "~> 1.14"
