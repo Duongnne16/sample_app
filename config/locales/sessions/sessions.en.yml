@@ -1,0 +1,12 @@
+en:
+  sessions:
+    new:
+      title: "Log in"
+      new_user: "New user?"
+      signup_now: "Sign up now!"
+      submit: "Log in"
+    create:
+      login_success: "Login successful"
+      invalid_email_password_combination: "Invalid email/password combination"
+    destroy:
+      logout_success: "Logged out successfully"

@@ -52,6 +52,15 @@ textarea {
   border-radius: 4px;
 }
 
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
 /* forms */
 input, 
 textarea, 
@@ -83,3 +92,8 @@ input {
     color: $state-danger-text;
   }
 }
+
+.btn-primary {
+  margin-top: 20px; 
+}
+
