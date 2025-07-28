@@ -1,14 +1,15 @@
 class SessionsController < ApplicationController
-  before_action :load_user, only: [:create]
+  before_action :find_user, only: [:create]
   before_action :check_authentication, only: [:create]
+
+  REMEMBER_ME_CHECKED = "1".freeze
+
   # GET /:locale/login
   def new; end
 
   # POST /:locale/login
   def create
-    reset_session
-    log_in @user
-    redirect_to @user, notice: t(".login_success")
+    login_success(@user)
   end
 
   # DELETE /:locale/logout
@@ -18,18 +19,38 @@ class SessionsController < ApplicationController
   end
 
   private
-  def load_user
-    @user = User.find_by(email: params.dig(:session, :email)&.downcase)
-    return if @user
 
-    flash.now[:danger] = t(".invalid_email_password_combination")
-    render :new, status: :unprocessable_entity and return
+  def find_user
+    @user = User.find_by(email: session_params[:email]&.downcase)
+    return if @user.present?
+
+    flash.now[:danger] = t(".user_not_found")
+    render :new, status: :unprocessable_entity
   end
 
   def check_authentication
-    return if @user&.authenticate(params.dig(:session, :password))
+    return if @user.authenticate(session_params[:password])
 
     flash.now[:danger] = t(".invalid_email_password_combination")
-    render :new, status: :unprocessable_entity and return
+    render :new, status: :unprocessable_entity
+  end
+
+  def session_params
+    params.require(:session).permit(:email, :password, :remember_me)
+  end
+
+  def login_success user
+    reset_session
+    log_in user
+    remember_option user
+    redirect_to user, notice: t(".login_success")
+  end
+
+  def remember_option user
+    if session_params[:remember_me] == REMEMBER_ME_CHECKED
+      remember(user)
+    else
+      forget(user)
+    end
   end
 end
