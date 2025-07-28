@@ -8,3 +8,11 @@ vi:
     submit:
       create: "Thêm %{model}"
       update: "Cập nhật %{model}"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+      long: "%d/%m/%Y %H:%M"

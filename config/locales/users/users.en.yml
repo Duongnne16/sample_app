@@ -1,0 +1,26 @@
+en:
+  users:
+    not_found: "User not found."
+    new:
+      title: "Sign Up"
+      heading: "Sign up"
+      form:
+        name: "Name"
+        email: "Email"
+        birthday: "Birthday"
+        password: "Password"
+        gender: "Gender"
+        password_confirmation: "Password Confirmation"
+        submit: "Create my account"
+    create:
+      success: "Welcome to the Sample App!"
+    show:
+      email: "Email"
+      birthday: "Birthday"
+      gender: "Gender"
+      created_at: "Created at"
+      updated_at: "Updated at"
+    genders:
+      female: "Female"
+      male: "Male"
+      other: "Other"
