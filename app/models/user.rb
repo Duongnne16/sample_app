@@ -26,11 +26,17 @@ class User < ApplicationRecord
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false}
   validates :name, presence: true, length: {maximum: NAME_MAX_LENGTH}
-  validates :password, presence: true, length: {minimum: PASSWORD_MIN_LENGTH}
+  validates :password,
+            presence: true,
+            length: {minimum: PASSWORD_MIN_LENGTH},
+            allow_nil: true
   validates :gender, presence: true
 
   validate :birthday_within_last_100_years
+
   attr_accessor :remember_token
+
+  scope :ordered, -> {order(id: :desc)}
 
   class << self
     # Returns the hash digest of the given string.

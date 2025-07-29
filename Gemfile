@@ -81,4 +81,6 @@ gem "sassc", "~> 2.4"
 
 gem "bcrypt", "~> 3.1.7"
 gem "config"
+gem "faker", "2.21.0"
 gem "i18n", "~> 1.14"
+gem "pagy"

@@ -72,6 +72,7 @@ GEM
     autoprefixer-rails (10.4.21.0)
       execjs (~> 2)
     base64 (0.1.1)
+    bcrypt (3.1.20)
     better_html (2.1.1)
       actionview (>= 6.0)
       activesupport (>= 6.0)
@@ -114,6 +115,8 @@ GEM
       smart_properties
     erubi (1.12.0)
     execjs (2.10.0)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.17.2)
     ffi (1.17.2-x86_64-linux-gnu)
     globalid (1.1.0)
@@ -163,6 +166,7 @@ GEM
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     ostruct (0.6.3)
+    pagy (9.3.5)
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
@@ -291,10 +295,12 @@ DEPENDENCIES
   config
   debug
   erb_lint
+  faker (= 2.21.0)
   i18n (~> 1.14)
   importmap-rails
   jbuilder
   mysql2 (~> 0.5)
+  pagy
   puma (~> 5.0)
   rails (~> 7.0.5)
   rubocop (~> 1.26)
