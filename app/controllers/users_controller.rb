@@ -1,16 +1,21 @@
 class UsersController < ApplicationController
   before_action :load_user, only: :show
 
+  # GET /:locale/users/:id
   def show; end
 
+  # GET /:locale/signup
   def new
     @user = User.new
   end
 
+  # POST /:locale/signup
   def create
     @user = User.new user_params
 
     if @user.save
+      reset_session
+      log_in @user
       flash[:success] = t(".success")
       redirect_to @user, status: :see_other
     else

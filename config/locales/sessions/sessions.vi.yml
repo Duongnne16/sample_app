@@ -1,0 +1,12 @@
+vi:
+  sessions:
+    new:
+      title: "Đăng nhập"
+      new_user: "Người dùng mới?"
+      signup_now: "Đăng ký ngay!"
+      submit: "Đăng nhập"
+    create:
+      login_success: "Đăng nhập thành công"
+      invalid_email_password_combination: "Kết hợp email/mật khẩu không hợp lệ"
+    destroy:
+      logout_success: "Đăng xuất thành công"

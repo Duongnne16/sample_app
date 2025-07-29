@@ -5,3 +5,8 @@ en:
       home: "Home"
       help: "Help"
       login: "Log in"
+      users: "Users"
+      account: "Account"
+      logout: "Log out"
+      profile: "Profile"
+      settings: "Settings"
