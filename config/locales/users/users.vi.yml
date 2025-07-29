@@ -1,26 +1,43 @@
 vi:
   users:
     not_found: "Không tìm thấy người dùng."
+    login_required: "Bạn cần đăng nhập để truy cập trang này."
+    not_authorized: "Bạn không có quyền thực hiện hành động này."
+    form:
+      name: "Tên"
+      email: "Email"
+      birthday: "Ngày sinh"
+      gender: "Giới tính"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
     new:
       title: "Đăng ký"
-      heading: "Tạo tài khoản"
-      form:
-        name: "Họ và tên"
-        email: "Email"
-        birthday: "Ngày sinh"
-        password: "Mật khẩu"
-        gender: "Giới tính"
-        password_confirmation: "Xác nhận mật khẩu"
-        submit: "Tạo tài khoản"
+      heading: "Đăng ký tài khoản"
+      submit: "Tạo tài khoản"
+    edit:
+      title: "Chỉnh sửa thông tin"
+      heading: "Cập nhật hồ sơ của bạn"
+      submit: "Lưu thay đổi"
+      change_avatar: "Đổi ảnh"
     create:
-      success: "Chào mừng bạn đến với Ứng dụng Mẫu!"
+      success: "Chào mừng bạn đến với Sample App!"
+    update:
+      success: "Cập nhật hồ sơ thành công."
     show:
       email: "Email"
       birthday: "Ngày sinh"
       gender: "Giới tính"
-      created_at: "Tạo lúc"
-      updated_at: "Cập nhật lúc"
+      created_at: "Ngày tạo"
+      updated_at: "Ngày cập nhật"
     genders:
-      male: "Nam"
       female: "Nữ"
+      male: "Nam"
       other: "Khác"
+    index:
+      title: "Tất cả người dùng"
+      heading: "Danh sách người dùng"
+      delete: "Xóa"
+      confirm_delete: "Bạn có chắc chắn muốn xóa người dùng này không?"
+    destroy:
+      success: "Người dùng đã được xóa."
+      error: "Xóa người dùng không thành công."
