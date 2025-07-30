@@ -21,6 +21,7 @@ vi:
       change_avatar: "Đổi ảnh"
     create:
       success: "Chào mừng bạn đến với Sample App!"
+      check_email: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản."
     update:
       success: "Cập nhật hồ sơ thành công."
     show:

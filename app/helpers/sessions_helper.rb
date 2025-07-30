@@ -43,7 +43,9 @@ module SessionsHelper
   # Loads user from cookies and logs in if authenticated.
   def load_user_from_cookies user_id
     user = User.find_by(id: user_id)
-    return if user.nil? || !user.authenticated?(cookies[:remember_token])
+    if user.nil? || !user.authenticated?(:remember, cookies[:remember_token])
+      return
+    end
 
     log_in(user)
     @current_user = user
