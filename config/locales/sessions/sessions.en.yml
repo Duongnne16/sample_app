@@ -9,5 +9,6 @@ en:
     create:
       login_success: "Login successful"
       invalid_email_password_combination: "Invalid email/password combination"
+      account_not_activated: "Account not activated. Please check your email for the activation link."
     destroy:
       logout_success: "Logged out successfully"

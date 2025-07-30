@@ -3,6 +3,7 @@ defaults: &defaults
   book_url: https://www.railstutorial.org/book
   help_page_text: "See the Ruby help page"
   book_link_text: "Ruby on Rails Tutorial book"
+  default_email: "noreply@example.com"
   
 development:
   <<: *defaults

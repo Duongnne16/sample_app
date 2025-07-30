@@ -8,7 +8,9 @@ User.create!(
   password_confirmation: "foobar",
   gender: "male",
   birthday: Date.new(1990, 1, 1),
-  admin: true
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now
 )
 
 # 30 random users
@@ -25,6 +27,8 @@ User.create!(
     password: password,
     password_confirmation: password,
     gender: gender,
-    birthday: birthday
+    birthday: birthday,
+    activated: true,
+    activated_at: Time.zone.now
   )
 end
