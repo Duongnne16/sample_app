@@ -4,7 +4,9 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
   # GET /:locale/users/:id
-  def show; end
+  def show
+    @pagy, @microposts = pagy(@user.microposts.includes(:user).newest)
+  end
 
   # GET /:locale/signup
   def new
@@ -69,14 +71,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(User::USER_PARAMS)
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t("users.login_required")
-    redirect_to login_path, status: :see_other
   end
 
   def correct_user

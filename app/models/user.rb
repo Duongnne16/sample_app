@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :microposts, dependent: :destroy
 
   USER_PARAMS = %i(
     name
@@ -96,6 +97,10 @@ class User < ApplicationRecord
   # Sends password reset email.
   def send_password_reset_email
     UserMailer.password_resets(self).deliver_now
+  end
+
+  def feed
+    microposts.order(created_at: :desc)
   end
 
   private

@@ -17,3 +17,4 @@ en:
       book_name: "Ruby on Rails Tutorial"
       app_description: "sample application"
       signup_now: "Sign up now!"
+      feed: "Micropost Feed"

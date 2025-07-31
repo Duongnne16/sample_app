@@ -1,5 +1,6 @@
 class PasswordResetsController < ApplicationController
-  before_action :load_user, :valid_user, :check_expiration, only: %i(edit update)
+  before_action :load_user, :valid_user, :check_expiration,
+                only: %i(edit update)
 
   def new; end
 
@@ -23,7 +24,7 @@ class PasswordResetsController < ApplicationController
       @user.errors.add :password, t(".blank_password")
       render :edit
     elsif @user.update user_params
-      #log_in @user
+      # log_in @user
       @user.update_column :reset_digest, nil
       flash[:success] = t(".password_reset_success")
       UserMailer.password_changed(@user).deliver_now
