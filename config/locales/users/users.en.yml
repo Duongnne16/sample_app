@@ -1,19 +1,28 @@
 en:
   users:
     not_found: "User not found."
+    login_required: "You must be logged in to access this page."
+    not_authorized: "You are not authorized to perform this action."
+    form:
+      name: "Name"
+      email: "Email"
+      birthday: "Birthday"
+      gender: "Gender"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
     new:
       title: "Sign Up"
       heading: "Sign up"
-      form:
-        name: "Name"
-        email: "Email"
-        birthday: "Birthday"
-        password: "Password"
-        gender: "Gender"
-        password_confirmation: "Password Confirmation"
-        submit: "Create my account"
+      submit: "Create my account"
+    edit:
+      title: "Edit user"
+      heading: "Update your profile"
+      submit: "Save changes"
+      change_avatar: "change"
     create:
       success: "Welcome to the Sample App!"
+    update:
+      success: "Profile updated"
     show:
       email: "Email"
       birthday: "Birthday"
@@ -24,3 +33,11 @@ en:
       female: "Female"
       male: "Male"
       other: "Other"
+    index:
+      title: "All users"
+      heading: "All users"
+      delete: "Delete"
+      confirm_delete: "Are you sure you want to delete this user?"
+    destroy:
+      success: "User deleted"
+      error: "Failed to delete user"

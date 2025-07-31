@@ -30,3 +30,10 @@ vi:
             birthday:
               blank: "không được để trống"
               invalid_birthday_range: "phải trong vòng 100 năm trở lại và không ở tương lai"
+      messages:
+        record_invalid: "Dữ liệu không hợp lệ: %{errors}"
+        blank: "không được để trống"
+        too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+        too_long: "quá dài (tối đa %{count} ký tự)"
+        taken: "đã được sử dụng"
+        invalid: "không hợp lệ"  

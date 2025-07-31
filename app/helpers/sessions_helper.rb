@@ -48,4 +48,14 @@ module SessionsHelper
     log_in(user)
     @current_user = user
   end
+
+  # Returns true if the given user is the current user, false otherwise.
+  def current_user? user
+    user == current_user
+  end
+
+  # Store the URL trying to be accessed.
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
+  end
 end
