@@ -1,0 +1,7 @@
+vi:
+  user_mailer:
+    password_changed:
+      subject: "Bạn vừa đổi mật khẩu"
+      title: "Thông báo đổi mật khẩu"
+      message: "Bạn vừa thay đổi mật khẩu, vui lòng đăng nhập lại để xác nhận đó là bạn!"
+      click_here: "Nhấn vào đây để đăng nhập"
