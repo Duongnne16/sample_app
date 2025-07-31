@@ -7,3 +7,8 @@ vi:
       instructions: "Hãy nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
       message: "Chào mừng bạn đến với Ứng dụng Mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
       activate_link: "Kích hoạt"
+    password_changed:
+      subject: "You have changed your password"
+      title: "Password Change Notification"
+      message: "You have recently changed your password. Please log in again to confirm it's really you!"
+      click_here: "Click here to log in"
