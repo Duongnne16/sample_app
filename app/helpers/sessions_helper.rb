@@ -44,7 +44,7 @@ module SessionsHelper
   def load_user_from_cookies user_id
     user = User.find_by(id: user_id)
     return if user.nil? ||
-      !user.authenticated?(:remember, cookies[:remember_token])
+              !user.authenticated?(:remember, cookies[:remember_token])
 
     log_in(user)
     @current_user = user

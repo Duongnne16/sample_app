@@ -7,3 +7,14 @@ vi:
       instructions: "Hãy nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
       message: "Chào mừng bạn đến với Ứng dụng Mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
       activate_link: "Kích hoạt"
+    password_changed:
+      subject: ""
+      title: "Thông báo đổi mật khẩu"
+      message: "Bạn vừa thay đổi mật khẩu, vui lòng đăng nhập lại để xác nhận đó là bạn!"
+      click_here: "Nhấn vào đây để đăng nhập"
+    password_reset:
+      title: "Đặt lại mật khẩu"
+      instruction: "Để đặt lại mật khẩu, hãy nhấp vào liên kết dưới đây:"
+      reset_password: "Đặt lại mật khẩu"
+      expire_notice: "Liên kết này sẽ hết hạn sau hai giờ."
+      ignore_notice: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."

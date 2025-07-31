@@ -16,6 +16,7 @@ class User < ApplicationRecord
   NAME_MAX_LENGTH = 10
   PASSWORD_MIN_LENGTH = 6
   MAX_BIRTHDAY_RANGE = 100
+  PASSWORD_RESET_EXPIRATION_HOURS = 2
   enum gender: {female: 0, male: 1, other: 2}
 
   before_save :downcase_email
@@ -35,7 +36,7 @@ class User < ApplicationRecord
 
   validate :birthday_within_last_100_years
 
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
 
   scope :ordered, -> {order(id: :desc)}
 
@@ -81,6 +82,21 @@ class User < ApplicationRecord
     return false if digest.nil?
 
     BCrypt::Password.new(digest).is_password? token
+  end
+
+  def password_reset_expired?
+    reset_send_at < PASSWORD_RESET_EXPIRATION_HOURS.hours.ago
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: User.digest(reset_token),
+                   reset_send_at: Time.zone.now
+  end
+
+  # Sends password reset email.
+  def send_password_reset_email
+    UserMailer.password_resets(self).deliver_now
   end
 
   private
