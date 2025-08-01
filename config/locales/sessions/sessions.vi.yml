@@ -6,6 +6,7 @@ vi:
       signup_now: "Đăng ký ngay!"
       submit: "Đăng nhập"
       remember_me: "Ghi nhớ tôi"
+      forgot_password: "Quên mật khẩu?"
     create:
       login_success: "Đăng nhập thành công"
       invalid_email_password_combination: "Kết hợp email/mật khẩu không hợp lệ"

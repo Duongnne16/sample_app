@@ -7,3 +7,8 @@ en:
       instructions: "Click on the link below to activate your account:"
       message: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate_link: "Activate"
+    password_changed:
+      subject: "Bạn vừa đổi mật khẩu"
+      title: "Thông báo đổi mật khẩu"
+      message: "Bạn vừa thay đổi mật khẩu, vui lòng đăng nhập lại để xác nhận đó là bạn!"
+      click_here: "Nhấn vào đây để đăng nhập"
