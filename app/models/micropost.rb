@@ -12,4 +12,5 @@ class Micropost < ApplicationRecord
                            message: I18n.t("microposts.image.too_large")}
 
   scope :newest, -> {order(created_at: :desc)}
+  scope :relate_post, -> (user_ids){where user_id: user_ids}
 end

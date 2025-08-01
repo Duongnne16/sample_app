@@ -1,6 +1,12 @@
 class User < ApplicationRecord
   has_secure_password
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+    foreign_key: :follower_id, dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+    foreign_key: :followed_id, dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
   USER_PARAMS = %i(
     name
@@ -100,7 +106,19 @@ class User < ApplicationRecord
   end
 
   def feed
-    microposts.order(created_at: :desc)
+    Micropost.relate_post(following_ids << id).includes(:user, image_attachment: :blob)
+  end
+
+  def follow other_user # Follow a user.
+    following << other_user
+  end
+
+  def unfollow other_user # Unfollows a user.
+    following.delete other_user
+  end
+
+  def following? other_user # Returns if the current user is following the other_user or not
+    following.include? other_user
   end
 
   private
