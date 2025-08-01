@@ -1,0 +1,9 @@
+en:
+  user_mailer:
+    account_activation:
+      title: "Sample App"
+      greeting: "Hi %{name},"
+      welcome_message: "Welcome to the Sample App!"
+      instructions: "Click on the link below to activate your account:"
+      message: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate_link: "Activate"

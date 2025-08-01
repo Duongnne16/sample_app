@@ -9,5 +9,6 @@ vi:
     create:
       login_success: "Đăng nhập thành công"
       invalid_email_password_combination: "Kết hợp email/mật khẩu không hợp lệ"
+      account_not_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email của bạn để nhận liên kết kích hoạt."
     destroy:
       logout_success: "Đăng xuất thành công"

@@ -21,6 +21,7 @@ en:
       change_avatar: "change"
     create:
       success: "Welcome to the Sample App!"
+      check_email: "Please check your email to activate your account."
     update:
       success: "Profile updated"
     show:
