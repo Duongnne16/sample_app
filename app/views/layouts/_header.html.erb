@@ -3,8 +3,8 @@
     <%= link_to t(".logo"), "#", id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t(".home"), "#" %></li>
-        <li><%= link_to t(".help"), "#" %></li>
+        <li><%= link_to t(".home"), root_path %></li>
+        <li><%= link_to t(".help"), static_pages_help_path %></li>
         <li><%= link_to t(".english"), locale: :en %></li>
         <li><%= link_to t(".vietnamese"), locale: :vi %></li>
         <% if logged_in? %>

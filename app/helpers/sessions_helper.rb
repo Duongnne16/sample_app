@@ -38,21 +38,22 @@ module SessionsHelper
     cookies.delete(:remember_token)
   end
 
+  # Returns true if the given user is the current user, false otherwise.
+  def current_user? user
+    user == current_user
+  end
+
   private
 
   # Loads user from cookies and logs in if authenticated.
   def load_user_from_cookies user_id
     user = User.find_by(id: user_id)
-    return if user.nil? ||
-              !user.authenticated?(:remember, cookies[:remember_token])
+    if user.nil? || !user.authenticated?(:remember, cookies[:remember_token])
+      return
+    end
 
     log_in(user)
     @current_user = user
-  end
-
-  # Returns true if the given user is the current user, false otherwise.
-  def current_user? user
-    user == current_user
   end
 
   # Store the URL trying to be accessed.

@@ -4,3 +4,11 @@ en:
       header:
         one: "The form contains 1 error"
         other: "The form contains %{count} errors"
+    user_info:
+      view_profile: "View my profile"
+      micropost_count:
+        one: "1 micropost"
+        other: "%{count} microposts"
+    micropost_form:
+      placeholder: "Compose new micropost..."
+      post: "Post"

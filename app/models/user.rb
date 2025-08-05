@@ -1,5 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :microposts, dependent: :destroy
+
+  PASSWORD_RESET_EXPIRATION_HOURS = 2
 
   USER_PARAMS = %i(
     name
@@ -16,7 +19,6 @@ class User < ApplicationRecord
   NAME_MAX_LENGTH = 10
   PASSWORD_MIN_LENGTH = 6
   MAX_BIRTHDAY_RANGE = 100
-  PASSWORD_RESET_EXPIRATION_HOURS = 2
   enum gender: {female: 0, male: 1, other: 2}
 
   before_save :downcase_email
@@ -38,7 +40,7 @@ class User < ApplicationRecord
 
   attr_accessor :remember_token, :activation_token, :reset_token
 
-  scope :ordered, -> {order(id: :desc)}
+  scope :ordered, -> {order(:id)}
 
   class << self
     # Returns the hash digest of the given string.
@@ -97,6 +99,10 @@ class User < ApplicationRecord
   # Sends password reset email.
   def send_password_reset_email
     UserMailer.password_resets(self).deliver_now
+  end
+
+  def feed
+    microposts.order(created_at: :desc)
   end
 
   private

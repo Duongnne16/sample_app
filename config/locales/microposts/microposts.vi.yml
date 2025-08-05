@@ -1,4 +1,16 @@
 vi:
   microposts:
+    timestamp: "Đăng %{time} trước."
     title: "Bài đăng"
-    heading: "Tất cả các bài đăng"
+    no_posts: "Người dùng này chưa có bài đăng."
+    delete: "Xóa"
+    confirm: "Bạn có chắc không?"
+    create:
+      created: "Tạo bài viết thành công!"
+    destroy:
+      deleted: "Xóa bài viết thành công"
+      delete_failed: "Xóa bài viết thất bại"
+      invalid: "Không tìm thấy bài viết"
+    image:
+      invalid_format: "phải ở định dạng JPEG, GIF or PNG"
+      too_large: "Phải nhỏ hơn 5MB"

@@ -1,4 +1,5 @@
 <% provide :title, @user.name %>
+
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -13,5 +14,18 @@
       <p><strong><%= t(".updated_at") %>:</strong> <%= l @user.updated_at, format: :long %></p>
     </section>
   </aside>
-</div>
 
+  <div class="col-md-8">
+    <% if @microposts.any? %>
+      <h3>
+        <%= t("microposts.title") %> (<%= @pagy.count %>)
+      </h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%== pagy_bootstrap_nav(@pagy) %>
+    <% else %>
+      <p><%= t("microposts.no_posts") %></p>
+    <% end %>
+  </div>
+</div>
