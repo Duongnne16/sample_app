@@ -29,7 +29,7 @@ class AccountActivationsController < ApplicationController
   end
 
   def check_activation
-    return if !@user.activated
+    return unless @user.activated
 
     flash[:info] = t(".already_activated")
     redirect_to root_url
