@@ -42,3 +42,11 @@ en:
     destroy:
       success: "User deleted"
       error: "Failed to delete user"
+    show_follow:
+      view_profile: "View my profile"
+      microposts: "Microposts"
+      following: "Following"
+      followers: "Followers"
+    follow:
+      follow_button: "Follow"
+      unfollow_button: "Unfollow"
