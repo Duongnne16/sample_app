@@ -12,3 +12,6 @@ vi:
     micropost_form:
       placeholder: "Viết micropost mới..."
       post: "Đăng"
+    stats:
+      following: "đang theo dõi"
+      followers: "người theo dõi"
