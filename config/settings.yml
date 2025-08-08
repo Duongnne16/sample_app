@@ -3,8 +3,9 @@ defaults: &defaults
   book_url: https://www.railstutorial.org/book
   help_page_text: "See the Ruby help page"
   book_link_text: "Ruby on Rails Tutorial book"
-  default_email: "noreply@example.com"
-  
+  default_email: "no-reply@example.com"
+  micropost_image_formats: "image/jpeg,image/gif,image/png"
+
 development:
   <<: *defaults
 

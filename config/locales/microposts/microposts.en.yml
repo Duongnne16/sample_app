@@ -1,4 +1,16 @@
 en:
   microposts:
+    timestamp: "Posted %{time} ago."
     title: "Microposts"
-    heading: "All Microposts"
+    no_posts: "This user has no posts yet."
+    delete: "Delete"
+    confirm: "Are you sure?"
+    create:
+      created: "Micropost created!"
+    destroy:
+      deleted: "Micropost deleted"
+      delete_failed: "Failed to delete micropost"
+      invalid: "Micropost not found"
+    image:
+      invalid_format: "must be JPEG, GIF, or PNG"
+      too_large: "should be less than 5MB"
